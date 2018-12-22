@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>
+      Post page
+    </title>
+  </head>
+  <body>
+    <% if faqs.nil? %>
+      <h1>FAQ item was not found!</h1>
+    <% else %>
+      <h1><%= faqs[:title] %></h1>
+      <p>
+        <%= faqs[:text] %>
+      </p>
+    <% end %>
+
+  </body>
+  <footer>
+      <h1>
+          <p>Contacts</p>
+      </h1>
+      <h3>
+          <p>
+              tel: 1 7543029731
+              name: Vlad Buckach
+          </p>
+      </h3>
+  </footer>
+</html>

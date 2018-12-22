@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>
+      Posts list page
+    </title>
+  </head>
+  <body>
+    <h1>FAQ</h1>
+
+    <% if faqs.nil? # posts.count == 0 %>
+      <h2>There are no questions, go and create one!</h2>
+    <% else %>
+
+    <ul>
+      <% faqs.each do |faq| %>
+        <li>
+          <h3><%= faq[:title] %></h3>
+          <div><%= faq[:text] %></div>
+          <p><a  href="/faq/<%= faq[:_id] %>">Read more</a></p>
+        </li>
+      <% end
+          end
+       %>
+    </ul>
+    
+  </body>
+  <footer>
+      <h1>
+          <p>Contacts</p>
+      </h1>
+      <h3>
+          <p>
+              tel: 1 7543029731
+              name: Vlad Buckach
+          </p>
+      </h3>
+  </footer>
+</html>

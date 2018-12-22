@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>
+      Posts list page
+    </title>
+  </head>
+  <body>
+    <h1>Posts list</h1>
+    <p>
+       Posts list:
+    </p>
+
+    <% if posts.nil? # posts.count == 0 %>
+      <h2>There are no posts, go and create one!</h2>
+    <% else %>
+
+    <ul>
+      <% posts.each do |post| %>
+        <li>
+          <h3><%= post[:title] %></h3>
+          <div><%= post[:text] %></div>
+          <p><a  href="/posts/<%= post[:_id] %>">Read more</a></p>
+        </li>
+      <% end
+          end
+       %>
+    </ul>
+  </body>
+  <footer>
+      <h1>
+          <p>Contacts</p>
+      </h1>
+      <h3>
+          <p>
+              tel: 1 7543029731
+              name: Vlad Buckach
+          </p>
+      </h3>
+  </footer>
+</html>

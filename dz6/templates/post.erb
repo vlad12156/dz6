@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>
+      Post page
+    </title>
+  </head>
+  <body>
+    <% if post.nil? %>
+      <h1>Your post was not found!</h1>
+    <% else %>
+      <h1>Post title: <%= post[:title] %></h1>
+      <p>
+        Post text: <%= post[:text] %>
+      </p>
+    <% end %>
+  </body>
+  <footer>
+      <h1>
+          <p>Contacts</p>
+      </h1>
+      <h3>
+          <p>
+              tel: 1 7543029731
+              name: Vlad Buckach
+          </p>
+      </h3>
+  </footer>
+</html>
